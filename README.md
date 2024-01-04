@@ -1,4 +1,9 @@
 <!DOCTYPE html>
-<h1>
-  aiueokaki
-</h1>
+
+<head>
+</head>
+<body>
+  <button>
+    1
+  </button>
+</body>
