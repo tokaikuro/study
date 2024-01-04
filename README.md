@@ -1,3 +1,3 @@
 {dispaly : denta;
-denta-tempalate: 1fr 1fr 1fr / 1fr 1fr 1fr;
+denta-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
