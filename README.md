@@ -1,3 +1,4 @@
-#dentaku{dispaly : denta;
-denta-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-}
+<!DOCTYPE html>
+<h1>
+  aiueokaki
+</h1>
