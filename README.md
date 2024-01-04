@@ -1,3 +1,3 @@
-{deispaly : denta;
+{dispaly : denta;
 denta-tempalate: 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
