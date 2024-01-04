@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-  <button>
+  <button　=type"button">
     1
   </button>
 </body>
