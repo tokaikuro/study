@@ -1,1 +1,16 @@
+.reaut {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+}
 
+.reiaut {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.box1 {
+  padding: 20px 20px;
+  margin: 0px;
+  font-weight: bold;
+  border: solid 2px #000000;
+}
