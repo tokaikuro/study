@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import "/study.css";
 
@@ -14,24 +15,24 @@ export default function MyComponent() {
   var j = 0;
   var first = 0;
   var second = 0;
-  var total = 0;
+  const [total, setTotal] = useState(0);
   var nanka = 0;
 
   const handlccClick = () => {
-    var a = 0;
-    var b = 0;
-    var c = 0;
-    var d = 0;
-    var e = 0;
-    var f = 0;
-    var g = 0;
-    var h = 0;
-    var i = 0;
-    var j = 0;
-    var first = 0;
-    var second = 0;
-    var total = 0;
-    var nanka = 0;
+    a = 0;
+    b = 0;
+    c = 0;
+    d = 0;
+    e = 0;
+    f = 0;
+    g = 0;
+    h = 0;
+    i = 0;
+    j = 0;
+    first = 0;
+    second = 0;
+    nanka = 0;
+    setTotal(0);
   };
 
   const handlplusClick = () => {
@@ -129,71 +130,71 @@ export default function MyComponent() {
 
   const handltotalClick = () => {
     if (nanka === 1) {
-      total = first + second;
+      setTotal(first + second);
     } else if (nanka === 2) {
-      total = first - second;
+      setTotal(first - second);
     } else if (nanka === 3) {
-      total = first * second;
+      setTotal(first * second);
     } else if (nanka === 4) {
-      total = first / second;
+      setTotal(first / second);
     } else {
-      total = 0;
+      setTotal(0);
     }
-
-    return (
-      <body>
-        <section className="reaut">
-          <div className="box1">
-            <button onClick={handlaClick}>1</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlbClick}>2</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlcClick}>3</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlccClick}>c</button>
-          </div>
-          <div className="box1">
-            <button onClick={handldClick}>4</button>
-          </div>
-          <div className="box1">
-            <button onClick={handleClick}>5</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlfClick}>6</button>
-          </div>
-          <div className="box1">
-            <button onClick={handltotalClick}>=</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlgClick}>7</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlhClick}>8</button>
-          </div>
-          <div className="box1">
-            <button onClick={handliClick}>9</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlplusClick}>+</button>
-          </div>
-          <div className="box1">
-            <button onClick={handljClick}>0</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlastClick}>*</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlminuClick}>/</button>
-          </div>
-          <div className="box1">
-            <button onClick={handlsuraClick}>-</button>
-          </div>
-        </section>
-        <div id="display">0</div>
-      </body>
-    );
   };
+
+  return (
+    <body>
+      <section className="reaut">
+        <div className="box1">
+          <button onClick={handlaClick}>1</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlbClick}>2</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlcClick}>3</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlccClick}>c</button>
+        </div>
+        <div className="box1">
+          <button onClick={handldClick}>4</button>
+        </div>
+        <div className="box1">
+          <button onClick={handleClick}>5</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlfClick}>6</button>
+        </div>
+        <div className="box1">
+          <button onClick={handltotalClick}>=</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlgClick}>7</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlhClick}>8</button>
+        </div>
+        <div className="box1">
+          <button onClick={handliClick}>9</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlplusClick}>+</button>
+        </div>
+        <div className="box1">
+          <button onClick={handljClick}>0</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlastClick}>*</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlsuraClick}>/</button>
+        </div>
+        <div className="box1">
+          <button onClick={handlminuClick}>-</button>
+        </div>
+      </section>
+      <div>{total}</div>
+    </body>
+  );
 }
