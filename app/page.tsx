@@ -13,10 +13,10 @@ export default function MyComponent() {
   var h = 0;
   var i = 0;
   var j = 0;
-  var first = 0;
-  var second = 0;
+  const [first, setFirst] = useState(0);
+  const [second, setSecond] = useState(0);
   const [total, setTotal] = useState(0);
-  var nanka = 0;
+  const [nanka, setNanka] = useState(0);
 
   const handlccClick = () => {
     a = 0;
@@ -29,102 +29,174 @@ export default function MyComponent() {
     h = 0;
     i = 0;
     j = 0;
-    first = 0;
-    second = 0;
-    nanka = 0;
+    setFirst(0);
+    setSecond(0);
+    setNanka(0);
     setTotal(0);
   };
 
   const handlplusClick = () => {
-    nanka = 1;
+    setNanka(1);
   };
   const handlminuClick = () => {
-    nanka = 2;
+    setNanka(2);
   };
   const handlastClick = () => {
-    nanka = 3;
+    setNanka(3);
   };
   const handlsuraClick = () => {
-    nanka = 4;
+    setNanka(4);
   };
 
   const handlaClick = () => {
     a = 1;
     if (nanka === 0) {
-      first += a;
+      if (first === 0) {
+        setFirst(+a);
+      } else {
+        setFirst(first * 10 + a);
+      }
     } else {
-      second += a;
+      if (second === 0) {
+        setSecond(+a);
+      } else {
+        setSecond(second * 10 + a);
+      }
     }
   };
   const handlbClick = () => {
     b = 2;
     if (nanka === 0) {
-      first += b;
+      if (first === 0) {
+        setFirst(+b);
+      } else {
+        setFirst(first * 10 + b);
+      }
     } else {
-      second += b;
+      if (second === 0) {
+        setSecond(+b);
+      } else {
+        setSecond(second * 10 + b);
+      }
     }
   };
   const handlcClick = () => {
     c = 3;
     if (nanka === 0) {
-      first += c;
+      if (first === 0) {
+        setFirst(+c);
+      } else {
+        setFirst(first * 10 + c);
+      }
     } else {
-      second += c;
+      if (second === 0) {
+        setSecond(+c);
+      } else {
+        setSecond(second * 10 + c);
+      }
     }
   };
   const handldClick = () => {
     d = 4;
     if (nanka === 0) {
-      first += d;
+      if (first === 0) {
+        setFirst(+d);
+      } else {
+        setFirst(first * 10 + d);
+      }
     } else {
-      second += d;
+      if (second === 0) {
+        setSecond(+d);
+      } else {
+        setSecond(second * 10 + d);
+      }
     }
   };
   const handleClick = () => {
     e = 5;
     if (nanka === 0) {
-      first += e;
+      if (first === 0) {
+        setFirst(+e);
+      } else {
+        setFirst(first * 10 + e);
+      }
     } else {
-      second += e;
+      if (second === 0) {
+        setSecond(+e);
+      } else {
+        setSecond(second * 10 + e);
+      }
     }
   };
   const handlfClick = () => {
     f = 6;
     if (nanka === 0) {
-      first += f;
+      if (first === 0) {
+        setFirst(+f);
+      } else {
+        setFirst(first * 10 + f);
+      }
     } else {
-      second += f;
+      if (second === 0) {
+        setSecond(+f);
+      } else {
+        setSecond(second * 10 + f);
+      }
     }
   };
   const handlgClick = () => {
     g = 7;
     if (nanka === 0) {
-      first += g;
+      if (first === 0) {
+        setFirst(+g);
+      } else {
+        setFirst(first * 10 + g);
+      }
     } else {
-      second += g;
+      if (second === 0) {
+        setSecond(+g);
+      } else {
+        setSecond(second * 10 + g);
+      }
     }
   };
   const handlhClick = () => {
     h = 8;
     if (nanka === 0) {
-      first += h;
+      if (first === 0) {
+        setFirst(+h);
+      } else {
+        setFirst(first * 10 + h);
+      }
     } else {
-      second += h;
+      if (second === 0) {
+        setSecond(+h);
+      } else {
+        setSecond(second * 10 + h);
+      }
     }
   };
   const handliClick = () => {
     i = 9;
     if (nanka === 0) {
-      first += i;
+      if (first === 0) {
+        setFirst(+i);
+      } else {
+        setFirst(first * 10 + i);
+      }
     } else {
-      second += i;
+      if (second === 0) {
+        setSecond(+i);
+      } else {
+        setSecond(second * 10 + i);
+      }
     }
   };
   const handljClick = () => {
     if (nanka === 0) {
-      first += j;
+      setFirst(first * 10);
     } else {
-      second += j;
+      setSecond(second * 10);
     }
   };
 
@@ -195,6 +267,8 @@ export default function MyComponent() {
         </div>
       </section>
       <div>{total}</div>
+      <div>{first}</div>
+      <div>{second}</div>
     </body>
   );
 }
